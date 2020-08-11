@@ -1,4 +1,4 @@
-# SQL-FND
+# SQL
 
 ## Durée
 
