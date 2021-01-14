@@ -2,7 +2,7 @@
 
 ## Durée
 
-14 heures.
+14 heures
 
 ## Public concerné
 
@@ -14,3 +14,4 @@ ___
 
 * [Wiki](https://github.com/seeren-training/SQL/wiki)
 
+___
