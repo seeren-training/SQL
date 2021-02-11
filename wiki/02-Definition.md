@@ -23,13 +23,13 @@ mysqlshow --help
 
 ### 🏷️ **Instance**
 
-Pour créer une connexion il faut spécifier un nom d'utilisateur et un password. Par défaut le nom d'utilisateur est `root` et le password est vide. Pour spécifier ces informations il faut utiliser les options `-u` et `-p`
+Pour créer une connexion il faut spécifier un nom d'utilisateur et un password. Par défaut le nom d'utilisateur est `root` et le password est vide. Pour spécifier ces informations il faut utiliser les options `-u` et `-p`.
 
 ```bash
 mysql -u root
 ```
 
-⚠️ Dans un terminal autre que linux exécutant un programme window vous aurez une réponse blanche et devez utiliser:
+Dans un terminal autre que linux exécutant un programme window vous aurez une réponse blanche et devez utiliser:
 
 ```sql
 winpty mysql -u root
@@ -57,7 +57,7 @@ Nous allons observer comment lister les bases existantes, utiliser, exporter, cr
 
 ### 🏷️ **Lister**
 
-Obtenir la liste des database existantes
+* Obtenir la liste des database existantes
 
 ```sql
 show databases;
@@ -65,7 +65,7 @@ show databases;
 
 ### 🏷️ **Utiliser**
 
-Utiliser une database
+* Utiliser une database
 
 ```sql
 use my_database;
@@ -73,7 +73,7 @@ use my_database;
 
 ### 🏷️ **Exporter**
 
-Exporter une database
+* Exporter une database
 
 ```sql
 mysqldump -u root my_database > my_database.sql
@@ -81,9 +81,10 @@ mysqldump -u root my_database > my_database.sql
 
 ### 🏷️ **Créer**
 
-🔗 [create-database](https://dev.mysql.com/doc/refman/5.7/en/create-database.html)
 
 Concernant l'identifiant de la base de données il n'y a pas de convention. Seul Microsoft précise une mise en capital de son identifiant, en dehors de ce cadre il est recommandé d'utiliser le snake_case. 
+
+[Create Database](https://dev.mysql.com/doc/refman/5.7/en/create-database.html)
 
 ```sql
 CREATE DATABASE IF NOT EXISTS my_database;
@@ -100,7 +101,7 @@ ___
 
 👨🏻‍💻 Manipulation
 
-Créer une database pour votre projet avec une option concernant le CHARACTER SET `utf8` et un COLLLATE `utf8_general_ci`
+Créer une database pour votre projet avec une option concernant le CHARACTER SET `utf8` et un COLLLATE `utf8_general_ci`.
 
 ___
 
@@ -129,11 +130,12 @@ mysql -u root my_database < my_database.sql
 
 ### 🏷️ **Créer**
 
-🔗 [create-table](https://dev.mysql.com/doc/refman/8.0/en/create-table.html)
+[Create Table](https://dev.mysql.com/doc/refman/8.0/en/create-table.html)
 
 La convention de nommage pour l'identifiant est la même que celle de la database.
 
 * Types et tailles
+
 ![image](https://raw.githubusercontent.com/seeren-training/SQL/master/wiki/resources/02/types.jpg)
 
 ```sql
@@ -142,7 +144,7 @@ CREATE TABLE my_table(
 );
 ```
 
-Les colonnes peuvent êtres listées avec la commande suivante
+Les colonnes peuvent êtres listées avec la commande suivante.
 
 ```sql
 show columns from my_table;
@@ -156,7 +158,7 @@ DROP TABLE my_table;
 
 ### 🏷️ **Options**
 
-🔗 [columns-table](https://dev.mysql.com/doc/refman/8.0/en/columns-table.html)
+[Columns](https://dev.mysql.com/doc/refman/8.0/en/columns-table.html)
 
 * Engine
 
@@ -166,7 +168,7 @@ Un table peut utiliser différents moteurs de stokage.
 show engines;
 ```
 
-Il est spécifiable en option
+Il est spécifiable en option.
 
 ```sql
 CREATE TABLE my_table(
@@ -177,8 +179,6 @@ CREATE TABLE my_table(
 Charset et Collate sont également spécifiables en dans la liste des options.
 
 ### 🏷️ **Contraintes et Attributs**
-
-🔗 [columns-table](https://dev.mysql.com/doc/refman/8.0/en/columns-table.html)
 
 * Default
 
@@ -199,9 +199,10 @@ CREATE TABLE my_table(
     foo CHAR(8) NOT NULL
 );
 ```
+
 * Attributs
 
-La colonne peut posséder les **attributs** `UNSIGNED`, `BINARY`, `ON UPDATE CURRENT_TIMESTAMP`, `AUTO_INCREMENT`....
+La colonne peut posséder les attributs `UNSIGNED`, `BINARY`, `ON UPDATE CURRENT_TIMESTAMP`, `AUTO_INCREMENT`...
 
 ```sql
 CREATE TABLE my_table(
@@ -213,9 +214,7 @@ ___
 
 ## 📑 Indexes
 
-Une colonne peut posséder un ou plusieurs indexes.
-
-Vous pouvez lister les indexes d'une table avec la commande suivante.
+Une colonne peut posséder un ou plusieurs indexes. Vous pouvez lister les indexes d'une table avec la commande suivante.
 
 ```sql
 show indexes from my_table;
@@ -275,11 +274,3 @@ ___
 👨🏻‍💻 Manipulation
 
 Créer les tables de votre projet en ligne de commande et choisissant avec pertinence les types, les tailles, les options et les indexes.
-
-___
-
-👨🏻‍💻 Manipulation
-
-Réunissez les tables de chaque membre d'équipe dans la base de données du projet
-
-___

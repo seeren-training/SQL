@@ -27,24 +27,22 @@ Les opérateurs sont utilisés pour rédiger des expressions.
 
 ### 🏷️ **Ensemblistes**
 
-Les opérateurs ensemblistes sont:
-* **Union** *- enregistrements de deux relations*
-* **Intersection** *- enregistrements communs aux deux relations*
-* **Différence** *- enregistrements d'une table abscent dans la seconde*
-* **Produit cartésien** *- recopie chaque enregistrements d'une table pour chaque enregistrements d'une autre*
+* Union: enregistrements de deux relations
+* Intersection: enregistrements communs aux deux relations
+* Différence: enregistrements d'une table abscent dans la seconde
+* Produit cartésien: recopie chaque enregistrements d'une table pour chaque enregistrements d'une autre
 
 ### 🏷️ **Relationnels**
 
-Les opérateurs ensemblistes sont:
-* **Sélection** *- enregistrements vérifiant une condition*
-* **Projection** *- garde certains attributs des enregistrements*
-* **Rebaptiser** *- défiit un alias*
-* **Jointure** *- associe plusieurs tables par le biais d’un lien*
-* **Division** *- ne peut s'exprimmer en SQL*
+* Sélection:  enregistrements vérifiant une condition
+* Projection: garde certains attributs des enregistrements
+* Rebaptiser: définit un alias
+* Jointure: associe plusieurs tables par le biais d’un lien
+* Division: ne peut s'exprimmer en SQL
 
 ___
 
-## 📑 Base de données relationelles
+## 📑 Installation
 
 Afin de découvrir la syntaxe et utiliser les opérateurs nous allons installer un serveur de base de données relationelle ainsi qu'un client dans une prochaine étape.
 
@@ -52,14 +50,14 @@ Afin de découvrir la syntaxe et utiliser les opérateurs nous allons installer 
 
 Vous trouverez une instance d'une mysql server dans le repertoire `bin`.
 
-* 🔗 [Installation](https://downloads.mariadb.org/)
+[Installation](https://downloads.mariadb.org/)
 
 Pensez à créer le dossier *data* puis installez le serveur.
 
 ```sql
 mysqld --install
 ```
- Installez les bases de données par défaut
+Installez les bases de données par défaut
 
  ```sql
 mysql_install_db
@@ -67,7 +65,7 @@ mysql_install_db
 
 Installez les utilisateurs par default
 
- ```sql
+```sql
 mysqld --initialize-insecure
 ```
 
@@ -78,7 +76,8 @@ mysqld --no-defaults
 ```
 
 Pour une distribution configurée vous pouvez installer xampp.
-* 🔗 [XAMPP](https://www.apachefriends.org/fr/index.html)
+
+[XAMPP](https://www.apachefriends.org/fr/index.html)
 
 Vérifiez votre installation en démarrant le MySQL serveur:
 

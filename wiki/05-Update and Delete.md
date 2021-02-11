@@ -8,9 +8,9 @@ ___
 
 ## 📑 Update
 
-🔗 [update](https://dev.mysql.com/doc/refman/8.0/en/update.html)
-
 Vous pouvez mettre à jour vos résultats en utilisant le *Update Statement*.
+
+🔗 [Update](https://dev.mysql.com/doc/refman/8.0/en/update.html)
 
 ### 🏷️ **Modifier plusieurs lignes**
 
@@ -30,9 +30,10 @@ ___
 
 ## 📑 Delete
 
-🔗 [delete](https://dev.mysql.com/doc/refman/8.0/en/delete.html)
 
 Vous pouvez mettre à jour vos résultats en utilisant le *Update Statement*.
+
+🔗 [Delete](https://dev.mysql.com/doc/refman/8.0/en/delete.html)
 
 ### 🏷️ **Supprimer plusieurs lignes**
 
@@ -52,9 +53,7 @@ ___
 
 ## 📑 Imbrication
 
-Les opérations sont souvent dépendantes de sous opérations de lecture notamment.
-
-Vous souhaitez par exemple mettre à jour une ligne de résultat qui dépend d'un résultat de lecture d'une autre.
+Les opérations sont souvent dépendantes de sous opérations de lecture notamment. Vous souhaitez par exemple mettre à jour une ligne de résultat qui dépend d'un résultat de lecture d'une autre.
 
 ```sql
 UPDATE `client` SET name = 'Last' 
@@ -80,5 +79,3 @@ ___
 👨🏻‍💻 Manipulation
 
 Tour par tour, exécutez des mise à jour et suppression qui correspondent à votre logique métier. Stockez ces requêtes.
-
-___

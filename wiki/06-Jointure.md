@@ -7,9 +7,9 @@ ___
 
 ## 📑 Definition
 
-🔗 [join](https://dev.mysql.com/doc/refman/8.0/en/join.html)
-
 Dans la cadre de tables en relations, la jointure permet de faire une selection sur plusieurs tables.
+
+🔗 [Join](https://dev.mysql.com/doc/refman/8.0/en/join.html)
 
 ![image](https://raw.githubusercontent.com/seeren-training/SQL/master/wiki/resources/05/jointure.jpg)
 

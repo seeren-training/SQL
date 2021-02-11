@@ -1,4 +1,4 @@
-# Data definition
+# Data alteration
 
 *  🔖 **Alteration**
 *  🔖 **Relations**
@@ -8,9 +8,10 @@ ___
 
 ## 📑 Alteration
 
-🔗 [alter-table](https://dev.mysql.com/doc/refman/5.7/en/alter-table-examples.html)
 
 Une fois crées vos tables peuvent être modifiées.
+
+[Alter table](https://dev.mysql.com/doc/refman/5.7/en/alter-table-examples.html)
 
 ### 🏷️ **Modifier une colonne**
 
@@ -82,8 +83,6 @@ Une relation multivaleur détermine que pour chaque enregistrement d'une table, 
 
 ![image](https://raw.githubusercontent.com/seeren-training/SQL/master/wiki/resources/03/manytomany.png)
 
-
-
 ___
 
 👨🏻‍💻 Manipulation
@@ -106,5 +105,3 @@ ___
 👨🏻‍💻 Manipulation
 
 Modifiez vos tables pour mettre en place les relations de clefs étrangères. Puis exporter votre base de données dans un fichier sql.
-
-___

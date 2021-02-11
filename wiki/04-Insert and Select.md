@@ -7,13 +7,14 @@
 
 Vous êtes en ligne de commande, pour visualiser votre structure vous pouvez utiliser ce service en ligne.
 
-🔗 [dbdiagram](https://dbdiagram.io/)
+🔗 [DBDiagram](https://dbdiagram.io/)
 
 ___
 
 ## 📑 Insert
 
-🔗 [insert](https://dev.mysql.com/doc/refman/8.0/en/insert.html)
+
+[Insert](https://dev.mysql.com/doc/refman/8.0/en/insert.html)
 
 Pour insérer des données dans vos tables il faut utiliser le *Insert Statement*.
 
@@ -70,8 +71,6 @@ REFERENCES client(id);
 
 Lors de la création d'une entrée pour ces deux tables sans transaction, si l'insertion de `address` échoue et que l'insertion préalable de client réussit, il y aura un client qui ne possède pas d'adresse.
 
-⚠️ Foreign key constraint fail
-
 ```sql
 INSERT INTO client (`name`) VALUES('John');
 INSERT INTO address (`client_id`) VALUES('Bad value');
@@ -79,15 +78,11 @@ INSERT INTO address (`client_id`) VALUES('Bad value');
 
 Pour les insertions dans des tables liées, vous devez utiliser la transaction pour exécuter ou annuler l'ensemble des instructions.
 
-✔️ Foreign key constraint fail
-
-Vous devez ouvrir un bloc transactionnel.
-
 ```sql
 START TRANSACTION;
 ```
 
-Tentez vos exécutions.
+* Tentez vos exécutions.
 
 ```sql
 INSERT INTO client (`name`) VALUES('John');
@@ -99,11 +94,13 @@ Pour valider les enregistrements il faut engager leur exécution.
 ```sql
 COMMIT;
 ```
+
 Pour annuler les enregistrements il faut annuler leur exécutions.
 
 ```sql
 ROLLBACK;
 ```
+
 En programmation vous utiliserez `COMMIT` en dernière instruction du `try` et `ROLLBACK` en dernière instruction du `catch`.
 
 ___
@@ -116,10 +113,10 @@ ___
 
 ## 📑 Select
 
-🔗 [select](https://dev.mysql.com/doc/refman/8.0/en/select.html)
 
 Pour LIRE des données dans vos tables il faut utiliser le *Select Statement*.
 
+[Select](https://dev.mysql.com/doc/refman/8.0/en/select.html)
 
 ### 🏷️ **Tout**
 
@@ -130,7 +127,7 @@ SELECT * FROM `client`;
 ```
 ### 🏷️ **Colonnes spécifiques**
 
-All spécifie toutes les colonnes.
+`*` spécifie toutes les colonnes.
 
 ```sql
 SELECT `id` FROM `client`;
@@ -138,9 +135,9 @@ SELECT `id` FROM `client`;
 
 ### 🏷️ **Fonctions**
 
-🔗 [functions](https://dev.mysql.com/doc/refman/8.0/en/group-by-functions.html)
-
 Il existe de nombreuses fonctions pour éviter un traitement programmatique.
+
+[Functions](https://dev.mysql.com/doc/refman/8.0/en/group-by-functions.html)
 
 * Compter le nombre de ligne
 
@@ -154,15 +151,13 @@ SELECT COUNT(`id`) FROM `client`;
 SELECT SUM(`id`) FROM `client`;
 ```
 
-* ...
-
 Utilisé sans opérateurs et sans jointures vous êtes limités à toutes les lignes pour une table.
 
 ## 📑 Clauses
 
-🔗 [clause](https://dev.mysql.com/doc/refman/8.0/en/select-optimization.html)
-
 Les clauses permettent d'affiner la sélection
+
+[Clause](https://dev.mysql.com/doc/refman/8.0/en/select-optimization.html)
 
 ### 🏷️ **Where**
 
@@ -173,7 +168,7 @@ SELECT * FROM `client`
 WHERE `id` = 1;
 ```
 
-* **Or**
+* Or
 
 ```sql
 SELECT * FROM `client` 
@@ -181,7 +176,7 @@ WHERE `id` = 1
 OR `name` = 'Kelly';
 ```
 
-* **And**
+* And
 
 ```sql
 SELECT * FROM `client` 
@@ -189,16 +184,16 @@ WHERE `id` < 10
 AND `name` = 'John';
 ```
 
-* **Like**
+* Like
 
 `%` correspond à n'importe quel aucun ou plusieurs caractères.
-
-`_` correspond à un caractère.
 
 ```sql
 SELECT * FROM `client` 
 WHERE `name` LIKE 'J%';
 ```
+
+`_` correspond à un caractère.
 
 ```sql
 SELECT * FROM `client` 
@@ -207,8 +202,7 @@ WHERE `name` LIKE 'J__n';
 
 ### 🏷️ **Order by**
 
-
-* **By column**
+* By column
 
 Vous pouvez spécifier plusieurs colonnes en les séparant par une virgule.
 
@@ -216,13 +210,13 @@ Vous pouvez spécifier plusieurs colonnes en les séparant par une virgule.
 SELECT * FROM `client` ORDER BY `name`;
 ```
 
-* **Ascending**
+* Ascending
 
 ```sql
 SELECT * FROM `client` ORDER BY `name` ASC;
 ```
 
-* **Descending**
+* Descending
 
 ```sql
 SELECT * FROM `client` ORDER BY `name` DESC;
@@ -259,5 +253,3 @@ ___
 👨🏻‍💻 Manipulation
 
 Tour par tour, exécutez des sélections qui correspondent à votre logique métier. Stockez ces requêtes.
-
-___
