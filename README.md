@@ -1,4 +1,4 @@
-# SQL
+# SQL - Utilisez les bases de données
 
 ## Durée
 
