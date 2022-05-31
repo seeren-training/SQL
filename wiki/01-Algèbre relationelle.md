@@ -59,7 +59,7 @@ mysqld --install
 ```
 Installez les bases de données par défaut
 
- ```sql
+```sql
 mysql_install_db
 ```
 
